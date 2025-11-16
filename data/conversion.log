@@ -1,0 +1,6 @@
+2025-11-15 08:47:13,655 - INFO - Iniciando conversión de track.geojson a datos.csv
+2025-11-15 08:47:14,257 - INFO - Archivo GeoJSON cargado correctamente
+2025-11-15 08:47:14,257 - INFO - Se encontraron 19969 features en el GeoJSON
+2025-11-15 08:47:14,269 - INFO - Propiedades detectadas: ['accuracy', 'bearing', 'leq_100', 'leq_1000', 'leq_10000', 'leq_125', 'leq_1250', 'leq_12500', 'leq_160', 'leq_1600', 'leq_16000', 'leq_200', 'leq_2000', 'leq_250', 'leq_2500', 'leq_315', 'leq_3150', 'leq_400', 'leq_4000', 'leq_500', 'leq_5000', 'leq_630', 'leq_6300', 'leq_800', 'leq_8000', 'leq_id', 'leq_mean', 'leq_utc', 'location_utc', 'marker-color', 'speed']
+2025-11-15 08:47:14,901 - INFO - Procesamiento completado. Total de filas listas para escribir: 19969
+2025-11-15 08:47:15,650 - INFO - Archivo CSV guardado exitosamente en: datos.csv
