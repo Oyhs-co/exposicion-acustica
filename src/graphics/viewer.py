@@ -7,7 +7,7 @@ import logging
 logging.getLogger(__name__)
 
 
-def plot_and_save(x: np.ndarray, y: np.ndarray, results: dict) -> None:
+def plot_and_save(x: np.ndarray, y: np.ndarray, results: dict, prefix: str = None) -> None:
     """
     Genera y guarda gráficas de serie temporal y comparación de métodos.
 
@@ -30,8 +30,8 @@ def plot_and_save(x: np.ndarray, y: np.ndarray, results: dict) -> None:
     plt.ylabel("y")
     plt.grid(True)
     plt.legend()
-    plt.savefig("IMG/serie.png")
-    logging.info("Gráfica de serie guardada en IMG/serie.png")
+    plt.savefig(f"IMG/{prefix}_serie.png")
+    logging.info(f"Gráfica de serie guardada en IMG/{prefix}_serie.png")
 
     # Comparación de métodos
     plt.subplot(1, 2, 2)
@@ -41,8 +41,8 @@ def plot_and_save(x: np.ndarray, y: np.ndarray, results: dict) -> None:
     plt.title("Comparación de métodos de integración")
     plt.ylabel("Valor de la integral")
     plt.grid(axis='y')
-    plt.savefig("IMG/comparacion.png")
-    logging.info("Gráfica de comparación guardada en IMG/comparacion.png")
+    plt.savefig(f"IMG/{prefix}_comparacion.png")
+    logging.info(f"Gráfica de comparación guardada en IMG/{prefix}_comparacion.png")
 
     plt.tight_layout()
     plt.close()

@@ -8,6 +8,7 @@ Guarda el resultado en:
 import polars as pl
 import os
 import logging
+from utils import max_filas_validas
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -38,13 +39,15 @@ def quitar_porcentaje_homogeneo(csv_path: str, columna_y: str, porcentaje: float
     indices = [int(i * step) for i in range(int(n_original / step)) if int(i * step) < n_original]
 
     df_reducido = df[indices]
+    n_necesario = max_filas_validas(df_reducido.height)
+    df_reducido = df_reducido.head(n_necesario)
     os.makedirs("data", exist_ok=True)
 
     if output_path == '' or output_path is None:
         output_path = f"data/reducido_{porcentaje:.0f}%.csv"
 
     df_reducido.write_csv(output_path)
-    logging.info(f"Archivo reducido al {100 - porcentaje:.0f}% ({len(indices)} filas). Guardado en: {output_path}")
+    logging.info(f"Archivo reducido aproximadamente al {100 - porcentaje:.0f}% ({df_reducido.height} filas). Guardado en: {output_path}")
 
 
 if __name__ == "__main__":

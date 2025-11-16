@@ -5,6 +5,7 @@ from .dB_to_intensity import db_a_intensidad
 from .analize import calcular_laeq_y_dosis
 from .errors import calcular_errores
 from .statisticists import calcular_estadisticos
+from .calculations import calcular_metodos_integracion
 
 __all__ = [
     "trapezoidal_rule",
@@ -14,4 +15,5 @@ __all__ = [
     "calcular_laeq_y_dosis",
     "calcular_errores",
     "calcular_estadisticos",
+    "calcular_metodos_integracion",
 ]

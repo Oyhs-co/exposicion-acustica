@@ -8,7 +8,7 @@ Guarda el resultado en:
 import polars as pl
 import os
 import logging
-from utils.validaciones import max_filas_validas
+from utils import max_filas_validas
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
