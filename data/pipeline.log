@@ -1,0 +1,528 @@
+2025-11-16 17:47:45,219 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 17:47:45,220 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 17:47:45,220 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 17:47:45,237 - INFO - root - No es necesario truncar.
+2025-11-16 17:47:45,239 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 17:47:45,239 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 17:47:45,251 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 17:47:45,251 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 17:47:45,258 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 17:47:45,267 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 17:47:45,268 - INFO - src.integration.metods - Integral Trapecios: 21662279461100.421875
+2025-11-16 17:47:45,268 - INFO - src.integration.metods - Integral Simpson 1/3: 21557913277772.015625
+2025-11-16 17:47:45,269 - INFO - src.integration.metods - Integral Simpson 3/8: 21616507929575.640625
+2025-11-16 17:47:45,269 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 17:47:45,272 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 17:47:45,274 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 17:47:45,274 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 17:47:45,635 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 17:47:45,786 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 17:47:45,892 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 17:47:45,897 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 17:47:45,926 - INFO - root - LAeq,T = 90.33 dB(A)
+2025-11-16 17:47:45,926 - INFO - root - Dosis = 237.41%
+2025-11-16 17:47:45,926 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 17:47:45,926 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 17:47:45,927 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 17:47:45,927 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 17:47:45,958 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 17:47:45,960 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 17:47:45,980 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 17:47:45,980 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 17:47:45,983 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 17:47:45,983 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 17:47:45,983 - INFO - src.integration.metods - Integral Trapecios: 4414373943525.880859
+2025-11-16 17:47:45,983 - INFO - src.integration.metods - Integral Simpson 1/3: 4435336379290.326172
+2025-11-16 17:47:45,984 - INFO - src.integration.metods - Integral Simpson 3/8: 4348316966123.137207
+2025-11-16 17:47:45,984 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 17:47:45,986 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 17:47:45,988 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 17:47:45,988 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 17:47:46,269 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 17:47:46,414 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 17:47:46,485 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 17:47:46,487 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 17:47:46,504 - INFO - root - LAeq,T = 90.37 dB(A)
+2025-11-16 17:47:46,504 - INFO - root - Dosis = 47.62%
+2025-11-16 17:47:46,504 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 17:47:46,504 - INFO - __main__ - Pipeline completado.
+2025-11-16 18:05:29,207 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 18:05:29,207 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 18:05:29,207 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:05:29,228 - INFO - root - No es necesario truncar.
+2025-11-16 18:05:29,229 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 18:05:29,229 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:05:29,246 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 18:05:29,246 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 18:05:29,253 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 18:05:29,253 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 18:05:29,254 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 18:05:29,255 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 18:05:29,256 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 18:05:29,256 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 18:05:29,260 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 18:05:29,263 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 18:05:29,263 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 18:05:29,870 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 18:05:30,054 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 18:05:30,167 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:05:30,183 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 18:05:30,223 - INFO - root - LAeq,T = -29.66 dB(A)
+2025-11-16 18:05:30,224 - INFO - root - Dosis = 0.00%
+2025-11-16 18:05:30,224 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:05:30,224 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 18:05:30,225 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 18:05:30,225 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:05:30,271 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 18:05:30,272 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 18:05:30,308 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 18:05:30,308 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 18:05:30,313 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 18:05:30,313 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 18:05:30,314 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 18:05:30,315 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 18:05:30,315 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 18:05:30,315 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:05:30,319 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:05:30,324 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 18:05:30,324 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 18:05:30,913 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 18:05:31,331 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 18:05:31,581 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:05:31,589 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 18:05:31,638 - INFO - root - LAeq,T = -29.54 dB(A)
+2025-11-16 18:05:31,638 - INFO - root - Dosis = 0.00%
+2025-11-16 18:05:31,639 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:05:31,639 - INFO - __main__ - Pipeline completado.
+2025-11-16 18:30:56,770 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 18:30:56,771 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 18:30:56,771 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:30:56,784 - INFO - root - No es necesario truncar.
+2025-11-16 18:30:56,784 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 18:30:56,785 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:30:56,795 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 18:30:56,796 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 18:30:56,802 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 18:30:56,802 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 18:30:56,803 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 18:30:56,804 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 18:30:56,804 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 18:30:56,804 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 18:30:56,808 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 18:30:56,810 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 18:30:56,810 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 18:30:57,168 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 18:30:57,267 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 18:30:57,349 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:30:57,355 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 18:30:57,386 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 18:30:57,386 - INFO - root - Dosis = 238.56%
+2025-11-16 18:30:57,387 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:30:57,387 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 18:30:57,387 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 18:30:57,387 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:30:57,414 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 18:30:57,415 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 18:30:57,436 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 18:30:57,436 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 18:30:57,438 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 18:30:57,439 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 18:30:57,439 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 18:30:57,439 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 18:30:57,440 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 18:30:57,440 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:30:57,442 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:30:57,444 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 18:30:57,444 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 18:30:57,640 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 18:30:57,746 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 18:30:57,822 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:30:57,825 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 18:30:57,844 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 18:30:57,844 - INFO - root - Dosis = 48.35%
+2025-11-16 18:30:57,844 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:30:57,844 - INFO - __main__ - Pipeline completado.
+2025-11-16 18:42:37,808 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 18:42:37,808 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 18:42:37,808 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:42:37,820 - INFO - root - No es necesario truncar.
+2025-11-16 18:42:37,821 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 18:42:37,821 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:42:37,830 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 18:42:37,830 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 18:42:37,837 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 18:42:37,837 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 18:42:37,838 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 18:42:37,838 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 18:42:37,839 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 18:42:37,839 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 18:42:37,841 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 18:42:37,843 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 18:42:37,843 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 18:42:38,285 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 18:42:38,410 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 18:42:38,488 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:42:38,492 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 18:42:38,522 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 18:42:38,522 - INFO - root - Dosis = 238.56%
+2025-11-16 18:42:38,522 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:42:38,523 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 18:42:38,523 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 18:42:38,523 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:42:38,552 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 18:42:38,553 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 18:42:38,569 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 18:42:38,569 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 18:42:38,572 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 18:42:38,572 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 18:42:38,572 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 18:42:38,573 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 18:42:38,573 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 18:42:38,573 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:42:38,576 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:42:38,578 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 18:42:38,578 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 18:42:38,878 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 18:42:39,022 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 18:42:39,077 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:42:39,079 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 18:42:39,111 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 18:42:39,111 - INFO - root - Dosis = 48.35%
+2025-11-16 18:42:39,111 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:42:39,111 - INFO - __main__ - Pipeline completado.
+2025-11-16 18:46:08,484 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 18:46:08,484 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 18:46:08,484 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:46:08,506 - INFO - root - No es necesario truncar.
+2025-11-16 18:46:08,507 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 18:46:08,507 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:46:08,522 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 18:46:08,522 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 18:46:08,528 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 18:46:08,528 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 18:46:08,529 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 18:46:08,529 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 18:46:08,530 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 18:46:08,530 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 18:46:08,533 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 18:46:08,535 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 18:46:08,535 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 18:46:08,906 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 18:46:09,024 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 18:46:09,147 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:46:09,154 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 18:46:09,194 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 18:46:09,195 - INFO - root - Dosis = 238.56%
+2025-11-16 18:46:09,195 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:46:09,195 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 18:46:09,195 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 18:46:09,196 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:46:09,242 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 18:46:09,244 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 18:46:09,279 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 18:46:09,280 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 18:46:09,283 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 18:46:09,283 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 18:46:09,284 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 18:46:09,284 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 18:46:09,285 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 18:46:09,285 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:46:09,288 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:46:09,291 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 18:46:09,291 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 18:46:09,514 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 18:46:09,610 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 18:46:09,773 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:46:09,777 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 18:46:09,811 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 18:46:09,811 - INFO - root - Dosis = 48.35%
+2025-11-16 18:46:09,811 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:46:09,811 - INFO - __main__ - Pipeline completado.
+2025-11-16 18:47:41,673 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 18:47:41,674 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 18:47:41,674 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:47:41,685 - INFO - root - No es necesario truncar.
+2025-11-16 18:47:41,686 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 18:47:41,686 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:47:41,695 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 18:47:41,695 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 18:47:41,701 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 18:47:41,701 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 18:47:41,701 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 18:47:41,702 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 18:47:41,702 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 18:47:41,703 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 18:47:41,706 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 18:47:41,707 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 18:47:41,708 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 18:47:42,052 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 18:47:42,144 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 18:47:42,267 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:47:42,277 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 18:47:42,301 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 18:47:42,302 - INFO - root - Dosis = 238.56%
+2025-11-16 18:47:42,302 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 18:47:42,302 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 18:47:42,302 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 18:47:42,302 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 18:47:42,334 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 18:47:42,336 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 18:47:42,359 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 18:47:42,359 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 18:47:42,367 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 18:47:42,367 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 18:47:42,368 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 18:47:42,368 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 18:47:42,369 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 18:47:42,369 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:47:42,372 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 18:47:42,374 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 18:47:42,374 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 18:47:42,677 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 18:47:42,791 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 18:47:42,853 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:47:42,856 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 18:47:42,888 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 18:47:42,888 - INFO - root - Dosis = 48.35%
+2025-11-16 18:47:42,888 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 18:47:42,888 - INFO - __main__ - Pipeline completado.
+2025-11-16 19:12:56,234 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 19:12:56,234 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 19:12:56,234 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:12:56,249 - INFO - root - No es necesario truncar.
+2025-11-16 19:12:56,249 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 19:12:56,249 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:12:56,259 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 19:12:56,259 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 19:12:56,268 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 19:12:56,268 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 19:12:56,268 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 19:12:56,269 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 19:12:56,270 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 19:12:56,270 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 19:12:56,273 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 19:12:56,274 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 19:12:56,274 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 19:12:56,923 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 19:12:57,105 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 19:12:57,241 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:12:57,283 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 19:12:57,324 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 19:12:57,325 - INFO - root - Dosis = 238.56%
+2025-11-16 19:12:57,325 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:12:57,325 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 19:12:57,325 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 19:12:57,325 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:12:57,370 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 19:12:57,372 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 19:12:57,404 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 19:12:57,404 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 19:12:57,407 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 19:12:57,407 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 19:12:57,408 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 19:12:57,408 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 19:12:57,409 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 19:12:57,409 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:12:57,414 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:12:57,417 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 19:12:57,417 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 19:12:57,704 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 19:12:57,795 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 19:12:57,861 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:12:57,863 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 19:12:57,903 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 19:12:57,903 - INFO - root - Dosis = 48.35%
+2025-11-16 19:12:57,903 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:12:57,904 - INFO - __main__ - Pipeline completado.
+2025-11-16 19:20:28,055 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 19:20:28,056 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 19:20:28,056 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:20:28,076 - INFO - root - No es necesario truncar.
+2025-11-16 19:20:28,077 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 19:20:28,077 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:20:28,092 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 19:20:28,092 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 19:20:28,105 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 19:20:28,105 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 19:20:28,106 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 19:20:28,106 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 19:20:28,107 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 19:20:28,107 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 19:20:28,111 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 19:20:28,114 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 19:20:28,114 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 19:20:28,515 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 19:20:28,663 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 19:20:28,796 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:20:28,817 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 19:20:28,864 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 19:20:28,864 - INFO - root - Dosis = 238.56%
+2025-11-16 19:20:28,864 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:20:28,865 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 19:20:28,865 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 19:20:28,866 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:20:28,925 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 19:20:28,927 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 19:20:28,964 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 19:20:28,965 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 19:20:28,970 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 19:20:28,970 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 19:20:28,971 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 19:20:28,971 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 19:20:28,972 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 19:20:28,972 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:20:28,978 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:20:28,983 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 19:20:28,983 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 19:20:29,467 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 19:20:29,722 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 19:20:29,776 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:20:29,778 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 19:20:29,806 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 19:20:29,807 - INFO - root - Dosis = 48.35%
+2025-11-16 19:20:29,807 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:20:29,807 - INFO - __main__ - Pipeline completado.
+2025-11-16 19:20:32,633 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 19:20:32,634 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 19:20:32,634 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:20:32,678 - INFO - root - No es necesario truncar.
+2025-11-16 19:20:32,679 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 19:20:32,679 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:20:32,699 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 19:20:32,699 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 19:20:32,708 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 19:20:32,709 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 19:20:32,709 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 19:20:32,710 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 19:20:32,710 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 19:20:32,710 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 19:20:32,713 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 19:20:32,715 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 19:20:32,715 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 19:20:33,130 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 19:20:33,245 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 19:20:33,333 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:20:33,342 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 19:20:33,375 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 19:20:33,376 - INFO - root - Dosis = 238.56%
+2025-11-16 19:20:33,376 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:20:33,376 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 19:20:33,376 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 19:20:33,376 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:20:33,405 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 19:20:33,406 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 19:20:33,434 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 19:20:33,434 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 19:20:33,437 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 19:20:33,438 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 19:20:33,438 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 19:20:33,439 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 19:20:33,439 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 19:20:33,439 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:20:33,443 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:20:33,446 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 19:20:33,446 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 19:20:33,918 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 19:20:34,234 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 19:20:34,375 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:20:34,378 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 19:20:34,408 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 19:20:34,408 - INFO - root - Dosis = 48.35%
+2025-11-16 19:20:34,408 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:20:34,408 - INFO - __main__ - Pipeline completado.
+2025-11-16 19:24:21,291 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 19:24:21,291 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 19:24:21,292 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:24:21,333 - INFO - root - No es necesario truncar.
+2025-11-16 19:24:21,334 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 19:24:21,334 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:24:21,362 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 19:24:21,363 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 19:24:21,376 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 19:24:21,376 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 19:24:21,377 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 19:24:21,378 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 19:24:21,379 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 19:24:21,379 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 19:24:21,385 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 19:24:21,388 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 19:24:21,388 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 19:24:21,959 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 19:24:22,198 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 19:24:22,252 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:24:22,262 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 19:24:22,304 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 19:24:22,304 - INFO - root - Dosis = 238.56%
+2025-11-16 19:24:22,304 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:24:22,305 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 19:24:22,305 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 19:24:22,305 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:24:22,342 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 19:24:22,343 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 19:24:22,375 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 19:24:22,375 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 19:24:22,378 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 19:24:22,378 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 19:24:22,379 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 19:24:22,379 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 19:24:22,379 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 19:24:22,379 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:24:22,382 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:24:22,384 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 19:24:22,385 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 19:24:22,701 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 19:24:22,927 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 19:24:22,945 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:24:22,947 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 19:24:22,965 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 19:24:22,965 - INFO - root - Dosis = 48.35%
+2025-11-16 19:24:22,965 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:24:22,965 - INFO - __main__ - Pipeline completado.
+2025-11-16 19:28:13,338 - INFO - __main__ - Iniciando el pipeline de procesamiento de datos acústicos.
+2025-11-16 19:28:13,338 - INFO - __main__ - Truncando datos al formato 25 + 6k.
+2025-11-16 19:28:13,338 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:28:13,350 - INFO - root - No es necesario truncar.
+2025-11-16 19:28:13,350 - INFO - __main__ - No se realizó truncado; usando archivo original.
+2025-11-16 19:28:13,350 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:28:13,360 - INFO - __main__ - DF truncado_25_6k -> filas=19969, columnas=32
+2025-11-16 19:28:13,360 - INFO - __main__ - Convirtiendo dB a intensidad (serie completa)
+2025-11-16 19:28:13,365 - INFO - __main__ - DF intensidad_completa -> filas=19969, columnas=2
+2025-11-16 19:28:13,366 - INFO - __main__ - Calculando métodos de integración (serie completa)
+2025-11-16 19:28:13,366 - INFO - src.integration.metods - Integral Trapecios: 21.662279
+2025-11-16 19:28:13,367 - INFO - src.integration.metods - Integral Simpson 1/3: 21.557913
+2025-11-16 19:28:13,367 - INFO - src.integration.metods - Integral Simpson 3/8: 21.616508
+2025-11-16 19:28:13,368 - INFO - __main__ - Exportando resultados a data/resultados/resultados_completos.csv
+2025-11-16 19:28:13,370 - INFO - root - Resultados exportados a data/resultados/resultados_completos.csv
+2025-11-16 19:28:13,372 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_completos.csv
+2025-11-16 19:28:13,372 - INFO - __main__ - Generando gráficos con prefijo 'grafico_completo'
+2025-11-16 19:28:13,857 - INFO - root - Gráfica de serie guardada en IMG/grafico_completo_serie.png
+2025-11-16 19:28:14,053 - INFO - root - Gráfica de comparación guardada en IMG/grafico_completo_comparacion.png
+2025-11-16 19:28:14,147 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:28:14,160 - INFO - root - Leyendo archivo: data/resultados/intensidad_completo.csv
+2025-11-16 19:28:14,184 - INFO - root - LAeq,T = 90.35 dB(A)
+2025-11-16 19:28:14,185 - INFO - root - Dosis = 238.56%
+2025-11-16 19:28:14,185 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_completo.csv
+2025-11-16 19:28:14,185 - INFO - __main__ - Datos procesados y resultados guardados (serie completa)
+2025-11-16 19:28:14,185 - INFO - __main__ - Generando conjunto de datos reducido al 80%.
+2025-11-16 19:28:14,185 - INFO - root - Leyendo archivo: data/datos.csv
+2025-11-16 19:28:14,207 - INFO - root - Archivo reducido aproximadamente al 20% (3991 filas). Guardado en: data/resultados/reducido_80.csv
+2025-11-16 19:28:14,209 - INFO - root - Leyendo archivo: data/resultados/reducido_80.csv
+2025-11-16 19:28:14,242 - INFO - __main__ - DF reducido_80 -> filas=3991, columnas=32
+2025-11-16 19:28:14,242 - INFO - __main__ - Convirtiendo dB a intensidad (reducido 80%%)
+2025-11-16 19:28:14,248 - INFO - __main__ - DF intensidad_reducido_80 -> filas=3991, columnas=2
+2025-11-16 19:28:14,248 - INFO - __main__ - Calculando métodos de integración (reducido 80%%)
+2025-11-16 19:28:14,249 - INFO - src.integration.metods - Integral Trapecios: 4.414374
+2025-11-16 19:28:14,249 - INFO - src.integration.metods - Integral Simpson 1/3: 4.435336
+2025-11-16 19:28:14,250 - INFO - src.integration.metods - Integral Simpson 3/8: 4.348317
+2025-11-16 19:28:14,250 - INFO - __main__ - Exportando resultados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:28:14,253 - INFO - root - Resultados exportados a data/resultados/resultados_reducido_80.csv
+2025-11-16 19:28:14,255 - INFO - root - Estadísticos exportados a data/resultados/estadisticos_reducido_80.csv
+2025-11-16 19:28:14,256 - INFO - __main__ - Generando gráficos con prefijo 'grafico_reducido_80'
+2025-11-16 19:28:14,748 - INFO - root - Gráfica de serie guardada en IMG/grafico_reducido_80_serie.png
+2025-11-16 19:28:14,968 - INFO - root - Gráfica de comparación guardada en IMG/grafico_reducido_80_comparacion.png
+2025-11-16 19:28:15,033 - INFO - __main__ - Calculando LAeq y dosis -> data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:28:15,035 - INFO - root - Leyendo archivo: data/resultados/intensidad_reducido_80.csv
+2025-11-16 19:28:15,065 - INFO - root - LAeq,T = 90.44 dB(A)
+2025-11-16 19:28:15,065 - INFO - root - Dosis = 48.35%
+2025-11-16 19:28:15,065 - INFO - root - Resultados guardados en: data/resultados/laeq_dosis_reducido_80.csv
+2025-11-16 19:28:15,065 - INFO - __main__ - Pipeline completado.

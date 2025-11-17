@@ -13,7 +13,11 @@ from ..utils import calcular_laeq_t, calcular_dosis
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def calcular_laeq_y_dosis(csv_path: str, columna_intensidad: str, dt: float, output_path: str = "data/laeq_dosis.csv"):
+def calcular_laeq_y_dosis(csv_path: str,
+                          columna_intensidad: str,
+                          dt: float,
+                          energia_total: float,
+                          output_path: str = "data/laeq_dosis.csv") -> None:
     """
     Calcula LAeq,T y dosis de ruido desde intensidad.
 
@@ -38,7 +42,7 @@ def calcular_laeq_y_dosis(csv_path: str, columna_intensidad: str, dt: float, out
     T_seg = len(intensidades) * dt
     T_horas = T_seg / 3600
 
-    laeq = calcular_laeq_t(intensidades, dt)
+    laeq = calcular_laeq_t(intensidades, dt, energia_total)
     dosis = calcular_dosis(laeq, T_horas)
 
     df_resultado = pl.DataFrame({

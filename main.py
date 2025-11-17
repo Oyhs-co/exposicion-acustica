@@ -21,7 +21,8 @@ import polars as pl
 # Configuración de logging global
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s'
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
+    filename='data/pipeline.log',
 )
 logger = logging.getLogger(__name__)
 
@@ -33,6 +34,7 @@ from src.integration import (
     calcular_errores,
     calcular_estadisticos,
     calcular_metodos_integracion,
+    mejor_metodo,
 )
 from src.utils import quitar_porcentaje_homogeneo, truncar_a_25_6k
 
@@ -69,7 +71,7 @@ def _exportar_y_graficar(
         ruta_export_laeq_dosis: Ruta CSV para LAeq y dosis.
     """
     logger.info("Exportando resultados a %s", ruta_export_resultados)
-    errores = calcular_errores(resultados, objetivo_w_m2)
+    errores = calcular_errores(resultados, objetivo_w_m2, df.height)
     estadisticos = calcular_estadisticos(df["intensidad"].to_numpy())
 
     exportar_resultados(resultados, errores, ruta_export_resultados)
@@ -85,11 +87,18 @@ def _exportar_y_graficar(
 
     logger.info("Calculando LAeq y dosis -> %s", ruta_export_laeq_dosis)
     # Persistimos primero la serie de intensidad requerida por la función
-    df.write_csv(ruta_export_laeq_dosis.replace("laeq_dosis", "intensidad"))
+    df_intensidad_path = (
+        ruta_export_laeq_dosis.replace("laeq_dosis", "intensidad")
+    )
+    df.write_csv(df_intensidad_path)
+
+    energia = resultados[mejor_metodo(errores)]
+
     calcular_laeq_y_dosis(
-        df_path := df.write_csv.__self__ if hasattr(df.write_csv, '__self__') else None,
+        csv_path=df_intensidad_path,
         columna_intensidad="intensidad",
         dt=1.0,
+        energia_total=energia,
         output_path=ruta_export_laeq_dosis,
     )
 
@@ -112,13 +121,15 @@ def main() -> None:
         logger.info("Truncando datos al formato 25 + 6k.")
         ruta_entrada = "data/datos.csv"
         ruta_truncado = "data/resultados/truncado_25_6k.csv"
-        truncar_a_25_6k(
+        if not truncar_a_25_6k(
             ruta_entrada,
             columna_y="leq_mean",
             output_path=ruta_truncado,
-        )
+        ):  # No se truncó
+            logger.info("No se realizó truncado; usando archivo original.")
+            ruta_truncado = ruta_entrada
 
-        df_trunc = leer_csv(ruta_truncado)
+        df_trunc = leer_csv(ruta_truncado)  # Evitar fila vacía final si existe
         _log_dataframe_info("truncado_25_6k", df_trunc)
 
         # 2) Serie completa
@@ -126,7 +137,7 @@ def main() -> None:
         intensidad = db_a_intensidad(df_trunc["leq_mean"].to_numpy())
         df_completo = pl.DataFrame(
             {
-                "Tiempo (s)": pl.int_range(1, df_trunc.height + 1),
+                "Tiempo (s)": pl.Series(range(1, df_trunc.height + 1)),
                 "intensidad": intensidad,
             }
         )
@@ -144,7 +155,7 @@ def main() -> None:
             df=df_completo,
             resultados=res_completo,
             ruta_prefix="grafico_completo",
-            objetivo_w_m2=1000.0,
+            objetivo_w_m2=90.4,
             ruta_export_resultados="data/resultados/resultados_completos.csv",
             ruta_export_estadisticos="data/resultados/estadisticos_completos.csv",
             ruta_export_laeq_dosis="data/resultados/laeq_dosis_completo.csv",
@@ -168,7 +179,7 @@ def main() -> None:
         logger.info("Convirtiendo dB a intensidad (reducido 80%%)")
         df_red_int = pl.DataFrame(
             {
-                "Tiempo (s)": pl.int_range(1, df_red.height + 1),
+                "Tiempo (s)": pl.Series(range(1, df_red.height + 1)),
                 "intensidad": db_a_intensidad(df_red["leq_mean"].to_numpy()),
             }
         )
@@ -186,7 +197,7 @@ def main() -> None:
             df=df_red_int,
             resultados=res_red,
             ruta_prefix="grafico_reducido_80",
-            objetivo_w_m2=1000.0,
+            objetivo_w_m2=90.4,
             ruta_export_resultados="data/resultados/resultados_reducido_80.csv",
             ruta_export_estadisticos="data/resultados/estadisticos_reducido_80.csv",
             ruta_export_laeq_dosis="data/resultados/laeq_dosis_reducido_80.csv",

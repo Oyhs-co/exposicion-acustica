@@ -20,9 +20,10 @@ def calcular_laeq_t(intensidades: np.ndarray, dt: float, energia_total: float) -
     float
         LAeq,T en dB(A).
     """
-
+    I_ref = 1e-12
+    energia_total = np.sum(intensidades) * dt
     T = len(intensidades) * dt
-    laeq = 10 * np.log10(energia_total / T)
+    laeq = 10 * np.log10((energia_total / T) / I_ref)
     return laeq
 
 

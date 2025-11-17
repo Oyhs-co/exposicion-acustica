@@ -3,7 +3,7 @@
 from .metods import trapezoidal_rule, simpson_1_3_rule, simpson_3_8_rule
 from .dB_to_intensity import db_a_intensidad
 from .analize import calcular_laeq_y_dosis
-from .errors import calcular_errores
+from .errors import calcular_errores, mejor_metodo, error_en_metodo
 from .statisticists import calcular_estadisticos
 from .calculations import calcular_metodos_integracion
 
@@ -14,6 +14,8 @@ __all__ = [
     "db_a_intensidad",
     "calcular_laeq_y_dosis",
     "calcular_errores",
+    "mejor_metodo",
+    "error_en_metodo",
     "calcular_estadisticos",
     "calcular_metodos_integracion",
 ]

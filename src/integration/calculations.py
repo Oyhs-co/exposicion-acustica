@@ -1,6 +1,6 @@
 """Cálculos de integración numérica."""
 
-from metods import trapezoidal_rule, simpson_1_3_rule, simpson_3_8_rule
+from .metods import trapezoidal_rule, simpson_1_3_rule, simpson_3_8_rule
 import numpy as np
 import logging
 

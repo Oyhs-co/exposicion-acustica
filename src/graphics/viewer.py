@@ -7,33 +7,49 @@ import logging
 logging.getLogger(__name__)
 
 
-def plot_and_save(x: np.ndarray, y: np.ndarray, results: dict, prefix: str = None) -> None:
+def plot_and_save(
+    x: np.ndarray,
+    y: np.ndarray,
+    results: dict[str, float],
+    prefix: str | None = None,
+) -> None:
     """
-    Genera y guarda gráficas de serie temporal y comparación de métodos.
-
-    Parameters
-    ----------
-    x : np.ndarray
-        Eje x.
-    y : np.ndarray
-        Eje y.
-    results : dict
-        Resultados de integración.
+    Genera y guarda:
+    - Gráfico de serie temporal mejorado (más claro y descriptivo).
+    - Gráfico de barras de comparación de métodos (sin cambios).
     """
-    plt.figure(figsize=(12, 5))
+    plt.figure(figsize=(14, 6))
 
-    # Serie temporal
+    # ---------- Serie temporal MEJORADA ----------
     plt.subplot(1, 2, 1)
-    plt.plot(x, y, label='Datos (y)', color='blue')
-    plt.title("Serie temporal de los datos")
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.grid(True)
-    plt.legend()
-    plt.savefig(f"IMG/{prefix}_serie.png")
-    logging.info(f"Gráfica de serie guardada en IMG/{prefix}_serie.png")
 
-    # Comparación de métodos
+    # Línea principal
+    plt.plot(x, y, color='teal', linewidth=2, label='Datos observados (y)')
+
+    # Sombra suave
+    plt.fill_between(x, y, alpha=0.2, color='teal')
+
+    # Estadísticas para la leyenda
+    y_mean = np.mean(y)
+    y_std = np.std(y)
+
+    plt.axhline(y_mean, color='crimson', linestyle='--', linewidth=1.2, label=f'Media: {y_mean:.2f}')
+    plt.axhline(y_mean + y_std, color='gray', linestyle=':', alpha=0.7, label=f'+1 desv. estándar: {y_mean + y_std:.2f}')
+    plt.axhline(y_mean - y_std, color='gray', linestyle=':', alpha=0.7, label=f'-1 desv. estándar: {y_mean - y_std:.2f}')
+
+    plt.title("Serie temporal de los datos observados")
+    plt.xlabel("Índice o variable independiente (x)")
+    plt.ylabel("Valor observado (y)")
+    plt.grid(True, linestyle='--', alpha=0.4)
+    plt.legend(loc='best', fontsize=9)
+    plt.tight_layout()
+
+    # Guardar serie temporal
+    serie_path = f"IMG/{prefix}_serie.png"
+    plt.savefig(serie_path)
+    logging.info(f"Gráfica de serie guardada en {serie_path}")
+
+    # ---------- Comparación de métodos (SIN CAMBIOS) ----------
     plt.subplot(1, 2, 2)
     methods = list(results.keys())
     values = list(results.values())
@@ -41,8 +57,9 @@ def plot_and_save(x: np.ndarray, y: np.ndarray, results: dict, prefix: str = Non
     plt.title("Comparación de métodos de integración")
     plt.ylabel("Valor de la integral")
     plt.grid(axis='y')
-    plt.savefig(f"IMG/{prefix}_comparacion.png")
-    logging.info(f"Gráfica de comparación guardada en IMG/{prefix}_comparacion.png")
+    comparacion_path = f"IMG/{prefix}_comparacion.png"
+    plt.savefig(comparacion_path)
+    logging.info(f"Gráfica de comparación guardada en {comparacion_path}")
 
     plt.tight_layout()
     plt.close()

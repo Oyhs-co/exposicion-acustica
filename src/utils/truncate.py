@@ -8,12 +8,12 @@ Guarda el resultado en:
 import polars as pl
 import os
 import logging
-from utils import max_filas_validas
+from .validations import max_filas_validas
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def truncar_a_25_6k(csv_path: str, columna_y: str, output_path: str = "data/truncado_25_6k.csv"):
+def truncar_a_25_6k(csv_path: str, columna_y: str, output_path: str = "data/truncado_25_6k.csv") -> bool:
     """
     Trunca un CSV al máximo tamaño válido según 25 + 6k.
 
@@ -34,7 +34,7 @@ def truncar_a_25_6k(csv_path: str, columna_y: str, output_path: str = "data/trun
 
     if n_valido >= n_original:
         logging.info("No es necesario truncar.")
-        return
+        return False
 
     df_truncado = df.head(n_valido)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -42,6 +42,7 @@ def truncar_a_25_6k(csv_path: str, columna_y: str, output_path: str = "data/trun
 
     logging.info(f"Archivo truncado a {n_valido} filas. Guardado en: {output_path}")
 
+    return True
 
 if __name__ == "__main__":
     truncar_a_25_6k("datos.csv", columna_y="leq_mean")
