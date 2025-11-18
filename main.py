@@ -169,7 +169,7 @@ def main() -> None:
         quitar_porcentaje_homogeneo(
             ruta_truncado,
             columna_y="leq_mean",
-            porcentaje=80.0,
+            porcentaje=20.0,
             output_path=ruta_reducido,
         )
 
